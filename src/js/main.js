@@ -5,6 +5,7 @@ import { initLoginButtons } from './components/loginButtons.js';
 import { initWebsiteButton } from './components/websiteButton.js';
 import { initFooterLinks } from './components/footerLinks.js';
 import { utils } from './utils/dateTime.js';
+import { Analytics } from "@vercel/analytics/next"
 
 // Initialize all components when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
