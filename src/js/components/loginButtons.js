@@ -35,15 +35,10 @@ export function initLoginButtons() {
       const password = formData.get('password') || loginForm.querySelector('input[type="password"]').value;
       
       if (userId && password) {
-        // VULNERABLE: Open Redirect - redirects to URL from query parameter without validation
-        // Example exploit: index.html?redirect=https://evil.com/phishing
-        // After login, user will be redirected to the URL specified in ?redirect= parameter
         const modal = document.getElementById('login-modal');
         if (modal) {
           modal.close();
         }
-        
-        // Simulate successful login, then redirect
         setTimeout(() => {
           redirectUtils.redirectAfterLogin('dashboard.html');
         }, 500);
@@ -52,3 +47,6 @@ export function initLoginButtons() {
   }
 }
 
+        // VULNERABLE: Open Redirect - redirects to URL from query parameter without validation
+        // Example exploit: index.html?redirect=https://evil.com/phishing
+        // After login, user will be redirected to the URL specified in ?redirect= parameter
