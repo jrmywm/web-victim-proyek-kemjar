@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="banknusantara">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - KlikBank</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            daisyui: {
+                themes: [{
+                    banknusantara: {
+                        "primary": "#2563eb",
+                        "secondary": "#1d4ed8",
+                        "accent": "#fbbf24",
+                        "neutral": "#1f2937",
+                        "base-100": "#ffffff",
+                        "base-200": "#f3f4f6",
+                        "base-300": "#e5e7eb",
+                    },
+                }],
+            },
+        }
+    </script>
+</head>
+<body class="bg-base-200">
+    <div class="max-w-7xl mx-auto bg-base-100 min-h-screen shadow-lg">
+        <header class="bg-gradient-to-b from-primary to-primary-focus text-white px-6 py-5">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <div class="bg-base-100 rounded-lg w-16 h-16 flex items-center justify-center shadow-lg">
+                        <span class="text-primary font-bold text-2xl">BN</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">BANK NUSANTARA</h1>
+                        <p class="text-sm opacity-90">Dashboard</p>
+                    </div>
+                </div>
+                <a href="index.html" class="btn btn-ghost text-white">Logout</a>
+            </div>
+        </header>
+
+        <div class="p-6">
+            <div class="alert alert-success mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Login berhasil! Selamat datang di dashboard.</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="stat bg-base-200 rounded-lg shadow">
+                    <div class="stat-title">Saldo</div>
+                    <div class="stat-value text-primary">Rp 50.000.000</div>
+                    <div class="stat-desc">Rekening Tabungan</div>
+                </div>
+                <div class="stat bg-base-200 rounded-lg shadow">
+                    <div class="stat-title">Transaksi Bulan Ini</div>
+                    <div class="stat-value text-success">24</div>
+                    <div class="stat-desc">Transaksi</div>
+                </div>
+                <div class="stat bg-base-200 rounded-lg shadow">
+                    <div class="stat-title">Kartu Kredit</div>
+                    <div class="stat-value text-warning">Rp 2.500.000</div>
+                    <div class="stat-desc">Tagihan Bulan Ini</div>
+                </div>
+            </div>
+
+            <div class="card bg-base-200 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Informasi Akun</h2>
+                    <p>Ini adalah halaman dashboard setelah login berhasil.</p>
+                    <div class="alert alert-info mt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm">
+                            <strong>Catatan:</strong> Halaman ini dapat diakses melalui open redirect vulnerability setelah login.
+                            Coba akses dengan: <code class="bg-base-300 px-2 py-1 rounded">index.html?redirect=dashboard.html</code>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="banknusantara">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KlikBank - Internet Banking</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            daisyui: {
+                themes: [
+                    {
+                        banknusantara: {
+                            "primary": "#2563eb",
+                            "secondary": "#1d4ed8",
+                            "accent": "#fbbf24",
+                            "neutral": "#1f2937",
+                            "base-100": "#ffffff",
+                            "base-200": "#f3f4f6",
+                            "base-300": "#e5e7eb",
+                            "info": "#3b82f6",
+                            "success": "#10b981",
+                            "warning": "#f59e0b",
+                            "error": "#ef4444",
+                        },
+                    },
+                ],
+            },
+        }
+    </script>
+    <style>
+        html {
+            overflow-y: scroll;
+            scrollbar-gutter: stable;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        /* Fallback for browsers that don't support scrollbar-gutter */
+        @supports not (scrollbar-gutter: stable) {
+            html {
+                overflow-y: scroll;
+            }
+        }
+    </style>
+</head>
+<body class="bg-base-200">
+    <div class="max-w-7xl mx-auto bg-base-100 min-h-screen shadow-lg">
+        <!-- Header -->
+        <header class="bg-gradient-to-b from-primary to-primary-focus text-white">
+            <div class="px-6 py-5">
+                <div class="flex items-center gap-4">
+                    <div class="bg-base-100 rounded-lg w-16 h-16 flex items-center justify-center shadow-lg">
+                        <span class="text-primary font-bold text-2xl">BN</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">BANK NUSANTARA</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="flex flex-col lg:flex-row gap-6 p-6">
+            <!-- Left Column -->
+            <div class="flex-1 lg:flex-[1.5]">
+                <div class="text-center py-8 px-4">
+                    <p class="text-base-content/70 text-lg mb-6">Selamat Datang di situs</p>
+                    <div class="my-12">
+                        <div class="inline-block bg-gradient-to-br from-primary to-primary-focus text-white rounded-2xl px-12 py-8 shadow-xl transform hover:scale-105 transition-transform duration-300">
+                            <div class="text-7xl font-bold mb-3">BN</div>
+                            <div class="text-2xl font-semibold">BANK NUSANTARA</div>
+                        </div>
+                    </div>
+                    <div class="mt-12 space-y-3">
+                        <button class="btn btn-primary btn-lg website-btn max-w-md w-full">
+                            Temukan solusi perbankan Anda pada website Bank Nusantara
+                        </button>
+                        <p class="text-primary font-semibold text-lg">www.banknusantara.co.id</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="flex-1 space-y-6">
+                <!-- Exchange Rate Box -->
+                <div class="card-banking rounded-xl p-6">
+                    <h3 class="text-primary font-bold text-lg mb-4 pb-3 border-b-2 border-primary">Kurs e-Rate</h3>
+                    <div class="text-right text-sm text-base-content/60 mb-4" id="exchangeDate">5-Des-2025 / 08:01 WIB</div>
+                    <div class="overflow-x-auto">
+                        <table class="table table-zebra w-full text-sm">
+                            <thead>
+                                <tr class="bg-primary text-white">
+                                    <th class="text-center font-semibold">KURS</th>
+                                    <th class="text-center font-semibold">BELI</th>
+                                    <th class="text-center font-semibold">JUAL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-semibold">USD</td>
+                                    <td class="text-right">16.605,00</td>
+                                    <td class="text-right">16.665,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">SGD</td>
+                                    <td class="text-right">12.450,00</td>
+                                    <td class="text-right">12.550,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">EUR</td>
+                                    <td class="text-right">18.200,00</td>
+                                    <td class="text-right">18.350,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">AUD</td>
+                                    <td class="text-right">11.100,00</td>
+                                    <td class="text-right">11.250,00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary rates-btn">
+                            kurs lainnya
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Internet Banking Box -->
+                <div class="card-banking rounded-xl p-6">
+                    <h3 class="text-primary font-bold text-lg mb-6 pb-3 border-b-2 border-primary">Internet Banking</h3>
+                    <div class="space-y-4">
+                        <div class="login-option bg-base-100 border-2 border-base-300 rounded-lg p-4 flex items-center justify-between hover:border-primary hover:shadow-md transition-all duration-200">
+                            <span class="font-bold">INDIVIDU</span>
+                            <button class="btn btn-primary login-btn">
+                                Login
+                            </button>
+                        </div>
+                        <div class="login-option bg-base-100 border-2 border-base-300 rounded-lg p-4 flex items-center justify-between hover:border-primary hover:shadow-md transition-all duration-200">
+                            <span class="font-bold">BISNIS</span>
+                            <div class="flex items-center gap-3">
+                                <button class="btn btn-primary login-btn">
+                                    Login
+                                </button>
+                                <a href="#" class="link link-primary text-sm font-medium demo-link">demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="bg-gradient-to-r from-base-300 to-base-200 border-t-2 border-base-300 px-6 py-5">
+            <div class="text-right">
+                <div class="text-primary font-bold text-xl">Halo Bank Nusantara 1500999</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-base-300 text-base-content/70 py-6 px-6">
+            <div class="max-w-5xl mx-auto text-xs leading-relaxed space-y-2">
+                <p>Bank Nusantara berizin dan diawasi oleh Otoritas Jasa Keuangan & Bank Indonesia</p>
+                <p>Bank Nusantara merupakan peserta penjaminan LPS. Maksimum nilai simpanan yang dijamin LPS per Nasabah per Bank adalah Rp2 miliar.</p>
+                <p>Untuk cek Tingkat Bunga Penjaminan LPS, <a href="#" id="lps-link" class="link link-primary font-semibold">klik di sini</a>.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Login Modal (DaisyUI) -->
+    <dialog id="login-modal" class="modal">
+        <div class="modal-box">
+            <h3 class="font-bold text-lg mb-4">Login Internet Banking</h3>
+            <input type="hidden" id="login-type" value="">
+            <form id="login-form" class="space-y-4">
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">User ID</span>
+                    </label>
+                    <input type="text" name="userid" placeholder="Masukkan User ID" class="input input-bordered w-full" required />
+                </div>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Password</span>
+                    </label>
+                    <input type="password" name="password" placeholder="Masukkan Password" class="input input-bordered w-full" required />
+                </div>
+                <div class="form-control">
+                    <label class="label cursor-pointer">
+                        <span class="label-text">Ingat User ID</span>
+                        <input type="checkbox" name="remember" class="checkbox" />
+                    </label>
+                </div>
+                <div class="modal-action">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="button" class="btn" onclick="document.getElementById('login-modal').close()">Batal</button>
+                </div>
+            </form>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+        </form>
+    </dialog>
+
+    <!-- Rates Modal (DaisyUI) -->
+    <dialog id="rates-modal" class="modal">
+        <div class="modal-box">
+            <h3 class="font-bold text-lg mb-4">Kurs Lainnya</h3>
+            <p class="py-4">Fitur kurs lainnya akan segera tersedia.</p>
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn">Tutup</button>
+                </form>
+            </div>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+        </form>
+    </dialog>
+
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>
